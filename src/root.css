@@ -1,3 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+body {
+  @apply dark:bg-slate-900 bg-slate-50;
+  /* user-select: none; */
+}
+
+
+input[type=range] {
+  -webkit-appearance: none;
+  background-color: transparent;
+  width: 70%;
+  @apply appearance-none w-full border-none rounded-sm my-4;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+
+input[type=range]:focus {
+  outline: none;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  @apply dark:bg-violet-300 bg-violet-400 dark:hover:bg-violet-400 hover:bg-violet-500 border-none rounded-full h-5 w-5;
+  cursor: pointer;
+  margin-top: -8px;
+}
+
+input[type=range]::-moz-range-thumb {
+  -webkit-appearance: none;
+  /* border-radius: 50%; */
+  @apply dark:bg-violet-300 bg-violet-400 dark:hover:bg-violet-400 hover:bg-violet-500 border-none rounded-full h-5 w-5;
+  cursor: pointer;
+  margin-top: -8px;
+}
+
+.non-edit[type=range]::-moz-range-thumb {
+  @apply hover:!bg-violet-400 dark:hover:!bg-violet-300;
+  cursor: auto;
+}
+
+.non-edit[type=range]::-webkit-slider-thumb {
+  @apply hover:bg-violet-400 dark:hover:bg-violet-300;
+  cursor: auto;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  @apply dark:bg-slate-700 bg-slate-400 border-none h-[3px] w-full;
+}
+
+input[type=range]::-moz-range-track {
+  @apply dark:bg-slate-700 bg-slate-400 border-none h-[3px] w-full;
+}
+
+/* NUMBER INPUTS */
+
+@layer base {
+
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}
